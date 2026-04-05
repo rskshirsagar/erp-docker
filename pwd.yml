@@ -12,6 +12,8 @@ services:
       # Use file provider instead of Docker socket (avoids Docker API version issues)
       - --providers.file.filename=/etc/traefik/dynamic.yml
       - --providers.file.watch=true
+      - --log.level=DEBUG
+      - --accesslog=true
       - --entrypoints.web.address=:80
       - --entrypoints.websecure.address=:443
       # HTTP-01 challenge (redirect is handled in dynamic config, not here)
