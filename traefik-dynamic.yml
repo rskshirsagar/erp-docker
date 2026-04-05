@@ -1,0 +1,21 @@
+http:
+  routers:
+    erpnext:
+      rule: "HostRegexp(`[a-z0-9-]+\\.sanvidhierp\\.in`)"
+      entryPoints:
+        - websecure
+      service: erpnext
+      tls:
+        certResolver: le
+
+  services:
+    erpnext:
+      loadBalancer:
+        servers:
+          - url: "http://frontend:8080"
+
+tls:
+  options:
+    default:
+      minVersion: VersionTLS12
+
