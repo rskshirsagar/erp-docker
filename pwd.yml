@@ -14,13 +14,10 @@ services:
       - --providers.file.watch=true
       - --entrypoints.web.address=:80
       - --entrypoints.websecure.address=:443
-      # Auto-redirect HTTP → HTTPS
-      - --entrypoints.web.http.redirections.entrypoint.to=websecure
-      - --entrypoints.web.http.redirections.entrypoint.scheme=https
-      # Let's Encrypt via HTTP-01 challenge
+      # HTTP-01 challenge (redirect is handled in dynamic config, not here)
       - --certificatesresolvers.le.acme.httpchallenge=true
       - --certificatesresolvers.le.acme.httpchallenge.entrypoint=web
-      - --certificatesresolvers.le.acme.email=rskshirsagar@gmail.com   # ← change to your email
+      - --certificatesresolvers.le.acme.email=admin@sanvidhierp.in   # ← change to your email
       - --certificatesresolvers.le.acme.storage=/letsencrypt/acme.json
     ports:
       - "80:80"
@@ -371,4 +368,3 @@ volumes:
 networks:
   frappe_network:
     driver: bridge
-

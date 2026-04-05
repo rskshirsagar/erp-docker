@@ -1,5 +1,6 @@
 http:
   routers:
+    # HTTPS router
     erpnext:
       rule: "HostRegexp(`[a-z0-9-]+\\.sanvidhierp\\.in`)"
       entryPoints:
@@ -7,6 +8,21 @@ http:
       service: erpnext
       tls:
         certResolver: le
+
+    # HTTP router — redirects to HTTPS (ACME challenge is handled automatically before this)
+    erpnext-http:
+      rule: "HostRegexp(`[a-z0-9-]+\\.sanvidhierp\\.in`)"
+      entryPoints:
+        - web
+      middlewares:
+        - redirect-to-https
+      service: erpnext
+
+  middlewares:
+    redirect-to-https:
+      redirectScheme:
+        scheme: https
+        permanent: true
 
   services:
     erpnext:
@@ -18,4 +34,3 @@ tls:
   options:
     default:
       minVersion: VersionTLS12
-
