@@ -10,7 +10,12 @@ http:
         certResolver: le
         domains:
           - main: "test.sanvidhierp.in"       # ← add each new customer here
+          - main: "prod.sanvidhierp.in"
           - main: "spark.sanvidhierp.in"
+          - main: "carcupid.sanvidhierp.in"
+          - main: "foxtail.sanvidhierp.in"
+          - main: "audiocraft.sanvidhierp.in"
+          - main: "triz.sanvidhierp.in"
 
     # HTTP router — redirects to HTTPS
     erpnext-http:
