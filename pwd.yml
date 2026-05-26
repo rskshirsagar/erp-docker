@@ -44,6 +44,7 @@ services:
           memory: 512M
     volumes:
       - sites:/home/frappe/frappe-bench/sites
+      - assets:/home/frappe/frappe-bench/sites/assets      # ← shared assets volume
       - logs:/home/frappe/frappe-bench/logs
     environment:
       DB_HOST: db
@@ -82,6 +83,7 @@ services:
       SOCKETIO_PORT: "9000"
     volumes:
       - sites:/home/frappe/frappe-bench/sites
+      - assets:/home/frappe/frappe-bench/sites/assets      # ← shared assets volume
       - logs:/home/frappe/frappe-bench/logs
 
   # ─────────────────────────────────────────────────────────────────────
@@ -109,6 +111,7 @@ services:
           memory: 1G
     volumes:
       - sites:/home/frappe/frappe-bench/sites
+      - assets:/home/frappe/frappe-bench/sites/assets      # ← shared assets volume
       - logs:/home/frappe/frappe-bench/logs
     entrypoint:
       - bash
@@ -213,6 +216,7 @@ services:
       CLIENT_MAX_BODY_SIZE: 50m
     volumes:
       - sites:/home/frappe/frappe-bench/sites
+      - assets:/home/frappe/frappe-bench/sites/assets      # ← shared assets volume
       - logs:/home/frappe/frappe-bench/logs
     # ── NO ports exposed directly anymore – Traefik handles ingress ──
     labels:
@@ -246,6 +250,7 @@ services:
       - long,default,short
     volumes:
       - sites:/home/frappe/frappe-bench/sites
+      - assets:/home/frappe/frappe-bench/sites/assets      # ← shared assets volume
       - logs:/home/frappe/frappe-bench/logs
     environment:
       FRAPPE_REDIS_CACHE: redis://redis-cache:6379
@@ -272,6 +277,7 @@ services:
       - short,default
     volumes:
       - sites:/home/frappe/frappe-bench/sites
+      - assets:/home/frappe/frappe-bench/sites/assets      # ← shared assets volume
       - logs:/home/frappe/frappe-bench/logs
     environment:
       FRAPPE_REDIS_CACHE: redis://redis-cache:6379
@@ -334,6 +340,7 @@ services:
       - schedule
     volumes:
       - sites:/home/frappe/frappe-bench/sites
+      - assets:/home/frappe/frappe-bench/sites/assets      # ← shared assets volume
       - logs:/home/frappe/frappe-bench/logs
 
   websocket:
@@ -358,13 +365,15 @@ services:
       FRAPPE_REDIS_QUEUE: redis://redis-queue:6379
     volumes:
       - sites:/home/frappe/frappe-bench/sites
+      - assets:/home/frappe/frappe-bench/sites/assets      # ← shared assets volume
       - logs:/home/frappe/frappe-bench/logs
 
 volumes:
   db-data:
   redis-queue-data:
-  letsencrypt:      # ← new: stores Let's Encrypt certificates
+  letsencrypt:      # ← stores Let's Encrypt certificates
   sites:
+  assets:           # ← NEW: shared assets volume across all containers
   logs:
 
 networks:
