@@ -2,24 +2,19 @@ http:
   routers:
     # HTTPS router
     erpnext:
-      rule: "HostRegexp(`[a-z0-9-]+\\.sanvidhierp\\.in`)"
+      rule: "HostRegexp(`[a-z0-9-]+(\\.[a-z0-9-]+)*\\.sanvidhierp\\.in`)"
       entryPoints:
         - websecure
       service: erpnext
       tls:
         certResolver: le
         domains:
-          - main: "test.sanvidhierp.in"       # ← add each new customer here
-          - main: "prod.sanvidhierp.in"
-          - main: "spark.sanvidhierp.in"
-          - main: "carcupid.sanvidhierp.in"
-          - main: "foxtail.sanvidhierp.in"
-          - main: "audiocraft.sanvidhierp.in"
-          - main: "triz.sanvidhierp.in"
+          - main: "test.asfsl.sanvidhierp.in"       # ← add each new customer here
+          - main: "asfsl.sanvidhierp.in"
 
     # HTTP router — redirects to HTTPS
     erpnext-http:
-      rule: "HostRegexp(`[a-z0-9-]+\\.sanvidhierp\\.in`)"
+      rule: "HostRegexp(`[a-z0-9-]+(\\.[a-z0-9-]+)*\\.sanvidhierp\\.in`)"
       entryPoints:
         - web
       middlewares:
