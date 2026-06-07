@@ -1,5 +1,13 @@
 http:
   routers:
+    # ACME challenge passthrough — MUST have highest priority
+    acme-challenge:
+      rule: "PathPrefix(`/.well-known/acme-challenge/`)"
+      entryPoints:
+        - web
+      service: noop@internal
+      priority: 1000
+
     # HTTPS router
     erpnext:
       rule: "HostRegexp(`[a-z0-9-]+(\\.[a-z0-9-]+)*\\.sanvidhierp\\.in`)"
@@ -9,7 +17,7 @@ http:
       tls:
         certResolver: le
         domains:
-          - main: "test.asfsl.sanvidhierp.in"       # ← add each new customer here
+          - main: "test.asfsl.sanvidhierp.in"
           - main: "asfsl.sanvidhierp.in"
 
     # HTTP router — redirects to HTTPS
@@ -20,6 +28,7 @@ http:
       middlewares:
         - redirect-to-https
       service: erpnext
+      priority: 1
 
   middlewares:
     redirect-to-https:
