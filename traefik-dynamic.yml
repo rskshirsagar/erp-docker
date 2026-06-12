@@ -17,8 +17,11 @@ http:
       tls:
         certResolver: le
         domains:
-          - main: "test.asfsl.sanvidhierp.in"
-          - main: "asfsl.sanvidhierp.in"
+          - main: "test.stampings.sanvidhierp.in"
+          - main: "shree.electricals.sanvidhierp.in"
+          - main: "shree.stampings.sanvidhierp.in"
+          - main: "verstech.sanvidhierp.in"
+          - main: "test.electricals.sanvidhierp.in"
 
     # HTTP router — redirects to HTTPS
     erpnext-http:
