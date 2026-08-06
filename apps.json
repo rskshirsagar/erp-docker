@@ -12,23 +12,7 @@
     "branch": "version-16"
   },
   {
-    "url": "https://github.com/frappe/education",
-    "branch": "version-16"
-  },
-  {
     "url": "https://github.com/shridarpatil/frappe_whatsapp",
     "branch": "master"
-  },
-  {
-    "url": "https://github.com/frappe/payments",
-    "branch": "develop"
-  },
-  {
-    "url": "https://github.com/frappe/lms",
-    "branch": "develop"
-  },
-  {
-    "url": "https://github.com/rskshirsagar/agrismart",
-    "branch": "main"
   }
 ]

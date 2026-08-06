@@ -9,7 +9,7 @@ http:
       tls:
         certResolver: le
         domains:
-          - main: "dev.sanvidhierp.in"       # ← add each new customer here
+          - main: "test.riyansh.sanvidhierp.in"       # ← add each new customer here
 
     # HTTP router — redirects to HTTPS
     erpnext-http:
