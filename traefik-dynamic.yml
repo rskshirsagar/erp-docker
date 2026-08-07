@@ -19,6 +19,9 @@ http:
         domains:
           - main: "test.asfsl.sanvidhierp.in"
           - main: "asfsl.sanvidhierp.in"
+          - main: "sai.sanvidhierp.in"
+          - main: "sao.sanvidhierp.in"
+          - main: "huntinmh.sanvidhierp.in"
 
     # HTTP router — redirects to HTTPS
     erpnext-http:
