@@ -14,5 +14,9 @@
   {
     "url": "https://github.com/shridarpatil/frappe_whatsapp",
     "branch": "master"
+  },
+  {
+    "url": "https://github.com/vijayshastri11/riyansh-api-layer",
+    "branch":"main"
   }
 ]
