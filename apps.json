@@ -8,35 +8,11 @@
     "branch": "version-16"
   },
   {
-    "url": "https://github.com/resilient-tech/india-compliance",
-    "branch": "version-16"
-  },
-  {
-    "url": "https://github.com/frappe/education",
-    "branch": "version-16"
-  },
-  {
-    "url": "https://github.com/shridarpatil/frappe_whatsapp",
-    "branch": "master"
-  },
-  {
-    "url": "https://github.com/frappe/payments",
-    "branch": "develop"
-  },
-  {
-    "url": "https://github.com/frappe/lms",
-    "branch": "develop"
-  },
-  {
-    "url": "https://github.com/rskshirsagar/agrismart",
+    "url": "https://github.com/sanvidhi-git/vsgil_sugar",
     "branch": "main"
   },
   {
-    "url": "https://github.com/vijayshastri11/sanvidhi_education_engineering",
-    "branch": "main"
-  },
-  {
-    "url": "https://github.com/rskshirsagar/sheet-metal",
+    "url": "https://github.com/sanvidhi-git/sanvidhi_epc",
     "branch": "main"
   }
 ]
