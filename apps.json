@@ -22,5 +22,13 @@
   {
     "url": "https://github.com/frappe/raven",
     "branch": "main"
+  },
+  {
+    "url": "https://github.com/sanvidhi-git/service-job-card-frappe-app",
+    "branch": "main"
+  },
+  {
+    "url": "https://github.com/sanvidhi-git/talley-bridge",
+    "branch": "main"
   }
 ]
