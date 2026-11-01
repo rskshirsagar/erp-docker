@@ -30,5 +30,9 @@
   {
     "url": "https://github.com/sanvidhi-git/talley-bridge",
     "branch": "main"
+  },
+  {
+    "url": "https://github.com/sanvidhi-git/ess_mobile",
+    "branch": "main"
   }
 ]
