@@ -22,5 +22,9 @@
   {
     "url": "https://github.com/rskshirsagar/agrismart",
     "branch": "main"
+  },
+  {
+    "url": "https://github.com/UdayDange-Dev/farm-advisory",
+    "branch": "version-16"
   }
 ]
