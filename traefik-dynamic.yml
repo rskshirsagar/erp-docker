@@ -16,6 +16,7 @@ http:
           - main: "foxtail.sanvidhierp.in"
           - main: "audiocraft.sanvidhierp.in"
           - main: "triz.sanvidhierp.in"
+          - main: "crystal.sanvidhierp.in"
 
     # HTTP router — redirects to HTTPS
     erpnext-http:
